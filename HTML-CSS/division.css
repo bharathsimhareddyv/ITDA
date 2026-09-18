@@ -1,0 +1,554 @@
+```css
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+#main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    width: 100%;
+    background-color: #4A4342;
+    color: white;
+    padding: 8px 10px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    overflow-x: auto;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
+
+    gap: 20px;
+    min-width: max-content;
+}
+
+li {
+    list-style: none;
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a:hover {
+    color: #ffd814;
+}
+
+
+/* =========================
+   SECTION / PRODUCT GRID
+========================= */
+
+section {
+    width: 100%;
+    max-width: 1600px;
+
+    margin: 30px auto 0;
+    padding: 15px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.abc {
+    min-width: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 20px;
+
+    background-color: white;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.abc:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   PRODUCT ITEM
+========================= */
+
+.ab {
+    min-width: 0;
+    padding: 5px;
+}
+
+.ab img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+p {
+    margin: 8px 0 0;
+
+    text-align: center;
+
+    font-size: 17px;
+    line-height: 1.3;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    margin: 0;
+
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background-color: black;
+    color: white;
+
+    padding: 15px;
+
+    gap: 10px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 2000;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    margin: 0;
+}
+
+header input {
+    flex: 1;
+
+    height: 35px;
+
+    margin: 0;
+    padding: 0 12px;
+
+    border: none;
+    border-radius: 12px;
+}
+
+.search {
+    width: 30px;
+    height: 30px;
+
+    margin: 0;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   TABLET
+   768px - 1199px
+========================= */
+
+@media (max-width: 1199px) {
+
+    section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   500px - 767px
+========================= */
+
+@media (max-width: 767px) {
+
+    nav {
+        padding: 8px;
+    }
+
+    ul {
+        justify-content: flex-start;
+        gap: 18px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+
+    section {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 10px;
+
+        margin-top: 20px;
+    }
+
+    .abc {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #131921;
+    color: white;
+
+    padding: 8px 20px;
+    gap: 15px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+header .logo {
+    width: 110px;
+    height: 50px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   DELIVERY TEXT
+========================= */
+
+header h3 {
+    margin: 0;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   SEARCH INPUT
+========================= */
+
+header input {
+    flex: 1;
+
+    min-width: 100px;
+    height: 40px;
+
+    margin: 0;
+    padding: 0 15px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 8px 0 0 8px;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   SEARCH ICON
+========================= */
+
+header .search {
+    width: 42px;
+    height: 40px;
+
+    margin: 0;
+    padding: 8px;
+
+    object-fit: contain;
+
+    background-color: #febd69;
+
+    border-radius: 0 8px 8px 0;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        height: 65px;
+        padding: 8px 12px;
+        gap: 10px;
+    }
+
+    header .logo {
+        width: 80px;
+        height: 45px;
+    }
+
+    header h3 {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    header input {
+        height: 36px;
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    header .search {
+        width: 38px;
+        height: 36px;
+        padding: 7px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    header {
+        height: 60px;
+        padding: 6px 8px;
+        gap: 6px;
+    }
+
+    header .logo {
+        width: 55px;
+        height: 40px;
+    }
+
+    header h3 {
+        font-size: 10px;
+        line-height: 13px;
+    }
+
+    header input {
+        min-width: 0;
+        height: 34px;
+
+        padding: 0 8px;
+
+        font-size: 12px;
+    }
+
+    header .search {
+        width: 34px;
+        height: 34px;
+        padding: 6px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 350px) {
+
+    header {
+        gap: 4px;
+        padding: 5px;
+    }
+
+    header .logo {
+        width: 48px;
+    }
+
+    header h3 {
+        font-size: 9px;
+        line-height: 11px;
+    }
+
+    header input {
+        font-size: 11px;
+    }
+
+    header .search {
+        width: 30px;
+        height: 32px;
+    }
+}
+/* =========================
+   SMALL MOBILE
+   320px - 499px
+========================= */
+
+@media (max-width: 499px) {
+
+    section {
+        grid-template-columns: 1fr;
+        padding: 8px;
+
+        gap: 12px;
+    }
+
+    .abc {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 5px;
+        padding: 6px;
+
+        border-radius: 15px;
+    }
+
+    .ab {
+        padding: 3px;
+    }
+
+    .ab img {
+        border-radius: 10px;
+    }
+
+    p {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    nav {
+        overflow-x: auto;
+    }
+
+    ul {
+        gap: 15px;
+    }
+
+    a {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL DEVICES
+   Below 350px
+========================= */
+
+@media (max-width: 350px) {
+
+    .abc {
+        gap: 3px;
+        padding: 5px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    a {
+        font-size: 12px;
+    }
+}
