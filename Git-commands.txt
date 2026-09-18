@@ -23,3 +23,6 @@ git log -- to check the git logs
 
 git clone <remote-location> -- we can clone other projects
 git pull origin main -- to pull all the changes
+
+
+click fork
