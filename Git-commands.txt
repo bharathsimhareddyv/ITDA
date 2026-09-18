@@ -1,0 +1,25 @@
+******WHEN YOU ADDING YOUR-ADDDING PROJECT TO GIT******
+
+git init -- it will initialize empty git repository
+git add . , git add <file-name> -- it will add files to the git
+git commit -m "message"  -- commiting the messages
+git branch -M main -- giving branch
+git remote add origin <origin-loaction>
+git push -u origin main
+
+git add .
+git commit -m "message"
+git push origin main
+
+git config --global user.name "Your Name"
+git config --global user.email "your email"
+
+git remote -v -- to check which git-hub remote loaction
+git remote remove origin -- to remove git hub location
+git remote add origin <origin-loaction> -- to add origin location
+
+git status -- to check the status of git
+git log -- to check the git logs
+
+git clone <remote-location> -- we can clone other projects
+git pull origin main -- to pull all the changes
